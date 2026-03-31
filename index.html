@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Of Songs - PA Onwumere</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body, html { height: 100%; margin: 0; }
+        .hero-section {
+            background: linear-gradient(rgba(8, 30, 54, 0.8), rgba(8, 30, 54, 0.8)), 
+                        url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .glass-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-section">
+    <div class="glass-box text-center shadow-lg">
+        <h1 class="display-5 fw-bold mb-3">Service Of Songs</h1>
+        <p class="lead mb-4">In Memory of PA Onwumere</p>
+        
+        <a id="pdfDownload" 
+           href="/assets/doc/pa-onwumere.pdf" 
+           download="PA_Onwumere_Service_of_Songs.pdf"
+           type="application/pdf"
+           class="btn btn-light btn-lg px-5 rounded-pill fw-bold">
+            Download Program (PDF)
+        </a>
+        
+        <p class="mt-4 small opacity-50">Your download will begin shortly...</p>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        // Trigger the download after a short delay
+        setTimeout(function() {
+            const link = document.getElementById('pdfDownload');
+            if(link) {
+                link.click();
+            }
+        }, 1000);
+    };
+</script>
+
+</body>
+</html>
